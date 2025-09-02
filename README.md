@@ -1,6 +1,6 @@
 # GIS Portfolio
 
-This is my [GIS portfolio](https://colinstiles.github.io/gis-portfolio) hosted on GitHub Pages. It is created with SCSS, CSS, HTML, and JavaScript as an easily customizable, lightweight, and fully responsive static site.
+This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) hosted on GitHub Pages. It is created with SCSS, CSS, HTML, and JavaScript as an easily customizable, lightweight, and fully responsive static site.
 
 ## Contents
 

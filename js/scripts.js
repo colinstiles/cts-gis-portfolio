@@ -1,9 +1,9 @@
 /*!
     Title: GIS Portfolio
-    Version: 1.2.2
-    Last Change: 03/25/2025
-    Author: Ryan Fitzgerald, edited by Colin T. stiles
-    Repo: https://github.com/colinstiles/gis-portfolio
+    Version: 1.0
+    Last Change: 09/02/2025
+    Author: Colin T. stiles
+    Repo: https://github.com/colinstiles/cts-gis-portfolio
 */
 
 (function($) {
