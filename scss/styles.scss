@@ -34,15 +34,15 @@
 */
 
 // Define base and accent colors
-$base-color: #c2c2c2;
+$base-color: #e0e0e0;
 $base-color-hover: darken($base-color, 10%);
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #eeeeee;
+$background-alt: #f9f9f9;
 
 // Define border colors
-$border: #dcd9d9;
+$border: #2F470E;
 
 // Define text colors
 $heading: #2f470e;
@@ -86,7 +86,7 @@ $text: #3D3E40;
 
 body {
     font-family: 'Lato', sans-serif;
-    font-size: 16px;
+    font-size: 17px;
 
     &.active {
         overflow: hidden;
@@ -174,7 +174,7 @@ header {
         &:hover {
             color: $base-color-hover;
             text-decoration: none;
-            background: #eee;
+            background: $background;
             border-radius: 4px;
         }
 
@@ -294,15 +294,15 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #eeeeee;
+    color: $background;
     padding: 15px 25px;
-    border: 3px solid #2F470E;
+    border: 3px solid $heading;
     border-radius: 30px;
     @include transition();
 
     &:hover {
-        color: #2F470E;
-        background: #fff;
+        color: $heading;
+        background: $background;
         text-decoration: none;
     }
 }
@@ -369,7 +369,7 @@ footer {
     }
 
     h1 {
-        color: #2F470E;
+        color: $heading;
         font-weight: 900;
         font-size: 5em;
         text-transform: uppercase;
@@ -378,7 +378,7 @@ footer {
     }
 
     h2 {
-        color: #2F470E;
+        color: $heading;
         font-weight: 500;
         font-size: 2.25em;
         margin-bottom: 15px;
@@ -405,7 +405,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: $base-color;
 
     span {
         cursor: pointer;
@@ -507,8 +507,8 @@ footer {
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #fff;
-    border: 1px solid #e6e6e6;
+    background: $background;
+    border: 1px solid $border;
     padding: 15px;
     border-radius: 3px;
     text-align: left;
@@ -524,7 +524,7 @@ footer {
     h4 {
         font-size: 1.2em;
         font-weight: 300;
-        color: #7e8890;
+        color: $heading;
         margin: 0 0 15px 0;
     }
 
@@ -544,7 +544,7 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: $base-color;
     width: 50px;
     height: 50px;
     background: $base-color;
@@ -567,7 +567,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #374054;
+    color: $heading;
 }
 
 /*
@@ -646,7 +646,7 @@ footer {
     max-width: 900px;
     margin: 0 auto 30px auto;
     overflow: hidden;
-    background: #fff;
+    background: $background;
     border-radius: 4px;
 }
 
@@ -735,7 +735,7 @@ footer {
 
     h2 {
         margin: 0 0 15px 0;
-        color: #fff;
+        color: $heading;
         font-weight: 500;
     }
 }
@@ -772,7 +772,7 @@ footer {
     button {
         display: block;
         width: 100%;
-        background: #fff;
+        background: $background;
         border-radius: 4px;
         padding: 5px 10px;
         border: none;
