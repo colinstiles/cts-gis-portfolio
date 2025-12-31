@@ -79,7 +79,7 @@ header {
 
 header ul {
     display: inline-block;
-    background: rgba(238, 238, 238, 0.75;
+    background: rgba(238, 238, 238, 0.75);
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -229,7 +229,7 @@ footer {
 
 .btn-rounded-white:hover {
     color: #eeeeee;
-    background: rgba(47, 71, 14, 0.75;
+    background: rgba(47, 71, 14, 0.75);
     text-decoration: none;
 }
 
