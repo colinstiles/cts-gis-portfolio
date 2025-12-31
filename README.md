@@ -4,7 +4,6 @@ This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) host
 
 ## Contents
 
-- [General](#general)
 - [Images](#images)
 - [Header Section](#header-section)
 - [Lead Section](#lead-section)
