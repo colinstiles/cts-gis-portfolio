@@ -622,6 +622,7 @@ footer {
 .project-info a:hover {
     background-color: #eeeeee;
     color: #2F470E;
+    border: 1px solid #2F470E;
 }
 
 .project.gallery {
