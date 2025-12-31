@@ -1,7 +1,7 @@
 /*!
     Title: GIS Portfolio
-    Version: 1.0
-    Last Change: 09/02/2025
+    Version: 1.1
+    Last Change: 12/31/2025
     Author: Colin T. Stiles
     Repo: https://github.com/colinstiles/cts-gis-portfolio
 
@@ -21,7 +21,7 @@ body.active {
 }
 
 .no-js #experience-timeline>div {
-    background: #fff;
+    background: #eeeeee;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #dcd9d9;
@@ -30,7 +30,7 @@ body.active {
 .no-js #experience-timeline>div h3 {
     font-size: 1.5em;
     font-weight: 300;
-    color: #37543d;
+    color: #2F470E;
     display: inline-block;
     margin: 0;
 }
@@ -43,7 +43,7 @@ body.active {
 }
 
 .no-js #experience-timeline>div p {
-    color: #74808a;
+    color: #3D3E40;
     font-size: 0.9em;
     margin: 0;
 }
@@ -96,19 +96,19 @@ header li {
 
 header a {
     display: block;
-    color: #37543d;
+    color: #2F470E;
     padding: 10px;
 }
 
 header a:hover {
-    color: #37543d;
+    color: #2F470E;
     text-decoration: none;
     background: #c2c2c2;
     border-radius: 4px;
 }
 
 header a:focus {
-    color: #37543d;
+    color: #2F470E;
     text-decoration: none;
 }
 
@@ -131,24 +131,24 @@ header.sticky {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: #37543d;
+    color: #2F470E;
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: #fff;
+    background: #eeeeee;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: #fff;
+    background: #eeeeee;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: #37543d;
+    color: #2F470E;
 }
 
 #mobile-menu-close span {
@@ -170,7 +170,7 @@ footer {
 
 .copyright p {
     margin: 0;
-    color: #74808a;
+    color: #3D3E40;
 }
 
 .top {
@@ -189,7 +189,7 @@ footer {
 }
 
 .top i {
-    color: #74808a;
+    color: #3D3E40;
 }
 
 .social {
@@ -209,7 +209,7 @@ footer {
 
 .social a {
     display: block;
-    color: #74808a;
+    color: #3D3E40;
     padding: 10px;
 }
 
@@ -219,16 +219,16 @@ footer {
 
 .btn-rounded-white {
     display: inline-block;
-    color: #fff;
+    color: #eeeeee;
     padding: 15px 25px;
-    border: 3px solid #fff;
+    border: 3px solid #2F470E;
     border-radius: 30px;
     transition: .5s ease all;
 }
 
 .btn-rounded-white:hover {
-    color: #37543d;
-    background: #fff;
+    color: #2F470E;
+    background: #eeeeee;
     text-decoration: none;
 }
 
@@ -257,7 +257,7 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: #37543d;
+    background: #2F470E;
 }
 
 .background-alt {
@@ -290,21 +290,21 @@ footer {
 }
 
 #lead-content h1 {
-    color: #37543d;
+    color: #2F470E;
     font-weight: 900;
     font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 0.9em;
     text-shadow:
-    -2px -2px 0 #eee,
-    2px -2px 0 #eee,
-    -2px 2px 0 #eee,
-    2px 2px 0 #eee;
+    -2px -2px 0 #eeeeee,
+    2px -2px 0 #eeeeee,
+    -2px 2px 0 #eeeeee,
+    2px 2px 0 #eeeeee;
 }
 
 #lead-content h2 {
-    color: #fff;
+    color: #2F470E;
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px;
@@ -330,7 +330,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #fff;
+    color: #eeeeee;
 }
 
 #lead-down span {
@@ -340,7 +340,7 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: 3px solid #eeeeee;
     text-align: center;
 }
 
@@ -370,11 +370,11 @@ footer {
 }
 
 #about h2 {
-    color: #37543d;
+    color: #2F470E;
 }
 
 #about p {
-    color: #74808a;
+    color: #3D3E40;
     margin: 0;
 }
 
@@ -385,7 +385,7 @@ footer {
 }
 
 #experience h2 {
-    color: #37543d;
+    color: #2F470E;
 }
 
 #experience-timeline {
@@ -403,7 +403,7 @@ footer {
     right: auto;
     height: 100%;
     width: 3px;
-    background: #37543d;
+    background: #2F470E;
     z-index: 0;
 }
 
@@ -412,15 +412,15 @@ footer {
     content: '';
     width: 3px;
     height: 40px;
-    background: #37543d;
-    background: linear-gradient(to bottom, #37543d, rgba(52, 152, 219, 0));
+    background: #2F470E;
+    background: linear-gradient(to bottom, #2F470E, rgba(52, 152, 219, 0));
     top: 100%;
     left: 303px;
 }
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #fff;
+    background: #eeeeee;
     border: 1px solid #e6e6e6;
     padding: 15px;
     border-radius: 3px;
@@ -430,7 +430,7 @@ footer {
 .vtimeline-content h3 {
     font-size: 1.5em;
     font-weight: 300;
-    color: #37543d;
+    color: #2F470E;
     display: inline-block;
     margin: 0;
 }
@@ -443,7 +443,7 @@ footer {
 }
 
 .vtimeline-content p {
-    color: #74808a;
+    color: #3D3E40;
     font-size: 0.9em;
     margin: 0;
 }
@@ -457,10 +457,10 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #fff;
+    color: #eeeeee;
     width: 50px;
     height: 50px;
-    background: #37543d;
+    background: #2F470E;
     border-radius: 50%;
     float: left;
     z-index: 99;
@@ -480,7 +480,7 @@ footer {
     left: 0;
     top: 10px;
     font-weight: 300;
-    color: #37543d;
+    color: #2F470E;
 }
 
 #education {
@@ -490,7 +490,7 @@ footer {
 }
 
 #education h2 {
-    color: #37543d;
+    color: #2F470E;
     margin-bottom: 50px;
 }
 
@@ -506,16 +506,16 @@ footer {
     font-weight: 500;
     float: left;
     margin: 0;
-    color: #37543d;
+    color: #2F470E;
 }
 
 .education-block span {
-    color: #74808a;
+    color: #3D3E40;
     float: right;
 }
 
 .education-block h4 {
-    color: #74808a;
+    color: #3D3E40;
     clear: both;
     font-weight: 500;
     margin: 0 0 15px 0;
@@ -524,7 +524,7 @@ footer {
 .education-block p,
 .education-block ul {
     margin: 0;
-    color: #74808a;
+    color: #3D3E40;
     font-size: 0.9em;
 }
 
@@ -539,7 +539,7 @@ footer {
 }
 
 #projects h2 {
-    color: #37543d;
+    color: #2F470E;
     margin-bottom: 50px;
 }
 
@@ -553,7 +553,7 @@ footer {
 .project {
     position: relative;
     overflow: hidden;
-    background: #fff;
+    background: #eeeeee;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -590,12 +590,12 @@ footer {
 .project-info h3 {
     font-size: 1.5em;
     font-weight: 300;
-    color: #37543d;
+    color: #2F470E;
     margin: 0 0 15px 0;
 }
 
 .project-info p {
-    color: #74808a;
+    color: #3D3E40;
     margin: 0 0 15px 0;
     font-size: 0.9em;
 }
@@ -603,8 +603,8 @@ footer {
 .project-info a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #37543d;
-    color: #fff;
+    background-color: #2F470E;
+    color: #eeeeee;
     text-decoration: none;
     text-align: center;
     margin-top: auto;
@@ -643,7 +643,7 @@ footer {
 
 .project.gallery .gallery-item p{
     font-size: 0.8em;
-    color: #74808a;
+    color: #3D3E40;
     text-align: center;
 }
 
@@ -677,7 +677,7 @@ footer {
 }
 
 #skills h2 {
-    color: #37543d;
+    color: #2F470E;
     margin-bottom: 50px;
 }
 
@@ -692,7 +692,7 @@ footer {
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
-    color: #37543d;
+    color: #2F470E;
     background: #e4e4ea;
     list-style: none;
     cursor: default;
@@ -701,24 +701,24 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: #37543d;
+    background: #2F470E;
     text-align: center;
 }
 
 #contact h2 {
     margin: 0 0 15px 0;
-    color: #fff;
+    color: #eeeeee;
     font-weight: 500;
 }
 
 #contact p  {
-    color: #fff;
+    color: #eeeeee;
     margin: 0 0 15px 0;
     font-size: 0.9em;
 }
 
 #contact a {
-    color: #fff;
+    color: #eeeeee;
     margin: 0 0 15px 0;
     font-size: 0.9em;
 }
@@ -730,7 +730,7 @@ footer {
 }
 
 .optional-section h2 {
-    color: #374054;
+    color: #2F470E;
 }
 
 .optional-section-block {
@@ -738,18 +738,18 @@ footer {
     margin: 0 auto 30px auto;
     padding: 15px;
     border: 1px solid #dcd9d9;
-    background: #fff;
+    background: #eeeeee;
     text-align: left;
 }
 
 .optional-section-block h3 {
     font-weight: 500;
     margin: 0 0 15px 0;
-    color: #37543d;
+    color: #2F470E;
 }
 
 .optional-section-block h4 {
-    color: #74808a;
+    color: #3D3E40;
     clear: both;
     font-weight: 500;
     margin: 0 0 15px 0;
@@ -758,7 +758,7 @@ footer {
 .optional-section-block p,
 .optional-section-block ul {
     margin: 0 0 15px 0;
-    color: #74808a;
+    color: #3D3E40;
     font-size: 0.9em;
 }
 
