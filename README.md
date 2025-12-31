@@ -1,6 +1,6 @@
 # GIS Portfolio
 
-This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) hosted on GitHub Pages. It is created with SCSS, CSS, HTML, and JavaScript as an easily customizable, lightweight, and fully responsive static site.
+This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) hosted on GitHub Pages. It is created with CSS, HTML, and JavaScript as an easily customizable, lightweight, and fully responsive static site.
 
 ## Contents
 
@@ -15,27 +15,6 @@ This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) host
 - [Skills Section](#skills-section)
 - [Contact Section](#contact-section)
 - [Footer Section](#footer-section)
-
-### General
-
-In general, most styles on the page are based off the definitions of variables in the variable section of the style sheet:
-
-```SCSS
-// Define base and accent colors
-$base-color: #37543d;
-$base-color-hover: darken($base-color, 10%);
-
-// Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
-
-// Define border colors
-$border: #dcd9d9;
-
-// Define text colors
-$heading: #374054;
-$text: #74808a;
-```
 
 ### Images
 
