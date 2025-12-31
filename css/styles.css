@@ -79,7 +79,7 @@ header {
 
 header ul {
     display: inline-block;
-    background: #eee;
+    background: #e0e0e0;
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -103,7 +103,7 @@ header a {
 header a:hover {
     color: #2F470E;
     text-decoration: none;
-    background: #c2c2c2;
+    background: #eeeeee;
     border-radius: 4px;
 }
 
@@ -136,14 +136,14 @@ header.sticky {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: #eeeeee;
+    background: #e0e0e0;
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: #eeeeee;
+    background: #e0e0e0;
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
