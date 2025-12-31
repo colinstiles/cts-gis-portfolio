@@ -79,7 +79,7 @@ header {
 
 header ul {
     display: inline-block;
-    background: #e0e0e0;
+    background: rgba(238, 238, 238, 0.75;
     text-align: center;
     padding: 10px;
     margin: 0;
@@ -103,7 +103,7 @@ header a {
 header a:hover {
     color: #2F470E;
     text-decoration: none;
-    background: #eeeeee;
+    background: #e0e0e0;
     border-radius: 4px;
 }
 
@@ -229,7 +229,7 @@ footer {
 
 .btn-rounded-white:hover {
     color: #eeeeee;
-    background: #2F470E;
+    background: rgba(47, 71, 14, 0.75;
     text-decoration: none;
 }
 
@@ -262,7 +262,7 @@ footer {
 }
 
 .background-alt {
-    background: #f2f2f5;
+    background: #eeeeee;
 }
 
 #lead {
@@ -309,6 +309,11 @@ footer {
     font-weight: 500;
     font-size: 2.25em;
     margin-bottom: 15px;
+    text-shadow:
+    -1px -1px 0 #eeeeee,
+    1px -1px 0 #eeeeee,
+    -1px 1px 0 #eeeeee,
+    1px 1px 0 #eeeeee;
 }
 
 #lead-overlay {
@@ -331,7 +336,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #eeeeee;
+    color: #2F470E;
 }
 
 #lead-down span {
@@ -341,7 +346,7 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #eeeeee;
+    border: 3px solid #2F470E;
     text-align: center;
 }
 
@@ -367,7 +372,7 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid #dcd9d9;
+    border-bottom: 1px solid #A68D68;
 }
 
 #about h2 {
@@ -382,7 +387,7 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid #dcd9d9;
+    border-bottom: 1px solid #A68D68;
 }
 
 #experience h2 {
@@ -414,7 +419,7 @@ footer {
     width: 3px;
     height: 40px;
     background: #2F470E;
-    background: linear-gradient(to bottom, #2F470E, rgba(52, 152, 219, 0));
+    background: linear-gradient(to bottom, #2F470E, rgba(47, 71, 14, 0));
     top: 100%;
     left: 303px;
 }
@@ -422,7 +427,7 @@ footer {
 .vtimeline-content {
     margin-left: 350px;
     background: #eeeeee;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #A68D68;
     padding: 15px;
     border-radius: 3px;
     text-align: left;
@@ -439,7 +444,7 @@ footer {
 .vtimeline-content h4 {
     font-size: 1.2em;
     font-weight: 300;
-    color: #7e8890;
+    color: #3D3E40;
     margin: 0 0 15px 0;
 }
 
@@ -486,7 +491,7 @@ footer {
 
 #education {
     padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid #dcd9d9;
+    border-bottom: 1px solid #A68D68;
     text-align: center;
 }
 
@@ -499,7 +504,7 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid #dcd9d9;
+    border: 1px solid #A68D68;
     text-align: left;
 }
 
@@ -535,7 +540,7 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid #dcd9d9;
+    border-bottom: 1px solid #A68D68;
     text-align: center;
 }
 
@@ -615,7 +620,8 @@ footer {
 }
 
 .project-info a:hover {
-    background-color: #2a4130;
+    background-color: #eeeeee;
+    color: #2F470E;
 }
 
 .project.gallery {
@@ -694,7 +700,7 @@ footer {
     margin: 7px;
     padding: 5px 10px;
     color: #2F470E;
-    background: #e4e4ea;
+    background: #e0e0e0;
     list-style: none;
     cursor: default;
     font-size: 1.2em;
@@ -727,7 +733,7 @@ footer {
 .optional-section {
     padding: 50px 15px;
     text-align: center;
-    border-top: 1px solid #dcd9d9;
+    border-top: 1px solid #A68D68;
 }
 
 .optional-section h2 {
@@ -738,7 +744,7 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid #dcd9d9;
+    border: 1px solid #A68D68;
     background: #eeeeee;
     text-align: left;
 }
