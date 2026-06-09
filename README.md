@@ -19,8 +19,8 @@ This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) host
 
 The portfolio contains the following images:
 
-* Main background (images/lead-bg.jpg) - this is the main background image provided via [Google](https://blog.google/products/earth/most-stunning-images-from-google-earth/). This, and the favicon, is the only image in the portfolio not created by me.
-* Favicon (/favicon.ico) - this is the favicon used for the page. It is the [globe with meridians emoji](https://favicon.io/emoji-favicons/globe-with-meridians).
+* Main background (images/lead-bg.jpg) - this is the main background image. Created in ArcGIS Pro.
+* Favicon (/favicon.ico) - this is the favicon used for the page. It is a custom image spun off from my `tin+topo` logo.
 * Project image - these are the images associated with my projects under the project section.
 
 ### Header Section
@@ -76,7 +76,7 @@ The Project section contains a number of `.project` elements that represent some
 *   Mars planetary cost distance analysis hosted on ArcGIS Experience
 *   Ogalalla groundwater analysis hosted on Story Maps
 *   Mapping salmon runs of the Snake River hosted on Story Maps
-*   My Medium arcticles
+*   My Medium articles
 *   A small sample of some static maps
 
 ### Skills Section
