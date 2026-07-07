@@ -4,16 +4,19 @@ This is my [GIS portfolio](https://colinstiles.github.io/cts-gis-portfolio) host
 
 ## Contents
 
-- [Images](#images)
-- [Header Section](#header-section)
-- [Lead Section](#lead-section)
-- [About Section](#about-section)
-- [Experience Section](#experience-section)
-- [Education Section](#education-section)
-- [Projects Section](#projects-section)
-- [Skills Section](#skills-section)
-- [Contact Section](#contact-section)
-- [Footer Section](#footer-section)
+- [GIS Portfolio](#gis-portfolio)
+  - [Contents](#contents)
+    - [Images](#images)
+    - [Header Section](#header-section)
+    - [Lead Section](#lead-section)
+    - [About Section](#about-section)
+    - [Experience Section](#experience-section)
+    - [Education Section](#education-section)
+    - [Projects Section](#projects-section)
+    - [Affiliations Section](#affiliations-section)
+    - [Skills Section](#skills-section)
+    - [Contact Section](#contact-section)
+    - [Footer Section](#footer-section)
 
 ### Images
 
@@ -42,6 +45,9 @@ My header includes:
     </li>
     <li>
         <a href="#projects">Projects</a>
+    </li>
+    <li>
+        <a href="#affiliations">Affiliations</a>
     </li>
     <li>
         <a href="#skills">Skills</a>
@@ -78,6 +84,10 @@ The Project section contains a number of `.project` elements that represent some
 *   Mapping salmon runs of the Snake River hosted on Story Maps
 *   My Medium articles
 *   A small sample of some static maps
+
+### Affiliations Section
+
+The Affiliations section lists the organizations that I am a member of or have affiliation with.
 
 ### Skills Section
 
