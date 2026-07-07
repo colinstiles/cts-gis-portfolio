@@ -1,4 +1,4 @@
-**Copyright (c) 2025 Colin T. Stiles**
+**Copyright (c) 2026 Colin T. Stiles**
 
 All rights reserved.
 
