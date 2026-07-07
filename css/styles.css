@@ -18,8 +18,8 @@
     --text-color-dark: #3D3E40; /* Dark Grey */
     --text-color-light: #eeeeee; /* Light Grey */
     --text-color-light-rgb: 238, 238, 238;
-    --background-light: #eeeeee; /* Light Grey Background */
-    --background-dark: #d3d3d3; /* Slightly Darker Light Grey Background */
+    --background-light: #ffffff; /* Light Grey Background */
+    --background-dark: #eeeeee; /* Slightly Darker Light Grey Background */
     --background-dark-rgb: 224, 224, 224;
     --border-color: #dcd9d9;
 
@@ -394,6 +394,7 @@ footer {
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid var(--secondary-color);
+    background: var(--background-light);
 }
 
 #about h2 {
@@ -725,7 +726,7 @@ footer {
 }
 
 .affiliation-item {
-    background: var(--background-dark);
+    background: var(--text-color-dark);
     border-radius: 4px;
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -742,7 +743,7 @@ footer {
     align-items: center;
     padding: 20px;
     text-decoration: none;
-    color: var(--text-color-dark);
+    color: var(--text-color-light);
     height: 100%;
     font-weight: var(--font-weight-normal);
     font-size: 1.2em;
