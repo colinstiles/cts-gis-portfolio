@@ -1,7 +1,7 @@
 /*!
     Title: GIS Portfolio
-    Version: 1.1
-    Last Change: 12/31/2025
+    Version: 1.3
+    Last Change: 07/07/2026
     Author: Colin T. Stiles
     Repo: https://github.com/colinstiles/cts-gis-portfolio
 
@@ -10,9 +10,32 @@
     Gulp and send to the /css folder which is then loaded on the page.
 */
 
+:root {
+    /* Colors */
+    --primary-color: #2F470E; /* Dark Green */
+    --primary-color-rgb: 47, 71, 14;
+    --secondary-color: #A68D68; /* Brownish */
+    --text-color-dark: #3D3E40; /* Dark Grey */
+    --text-color-light: #eeeeee; /* Light Grey */
+    --text-color-light-rgb: 238, 238, 238;
+    --background-light: #eeeeee; /* Light Grey Background */
+    --background-lighter: #e0e0e0; /* Slightly Darker Light Grey Background */
+    --background-lighter-rgb: 224, 224, 224;
+    --border-color: #dcd9d9;
+
+    /* Fonts */
+    --font-family-base: 'Lato', sans-serif;
+    --font-size-base: 17px;
+    --font-size-small: 0.9em;
+    --font-size-xsmall: 0.8em;
+    --font-weight-light: 300;
+    --font-weight-normal: 500;
+    --font-weight-bold: 900;
+}
+
 body {
-    font-family: 'Lato', sans-serif;
-    font-size: 17px;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
 }
 
 body.active {
@@ -21,30 +44,30 @@ body.active {
 }
 
 .no-js #experience-timeline>div {
-    background: #e0e0e0;
+    background: var(--background-lighter);
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #dcd9d9;
+    border: 1px solid var(--border-color);
 }
 
 .no-js #experience-timeline>div h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #2F470E;
+    font-size: 1.5em; /* Consider a variable like var(--font-size-h3) */
+    font-weight: var(--font-weight-light);
+    color: var(--primary-color);
     display: inline-block;
     margin: 0;
 }
 
 .no-js #experience-timeline>div h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #2F470E;
+    font-size: 1.2em; /* Consider a variable like var(--font-size-h4) */
+    font-weight: var(--font-weight-light);
+    color: var(--primary-color);
     margin: 0 0 15px 0;
 }
 
 .no-js #experience-timeline>div p {
-    color: #3D3E40;
-    font-size: 0.9em;
+    color: var(--text-color-dark);
+    font-size: var(--font-size-small);
     margin: 0;
 }
 
@@ -79,15 +102,13 @@ header {
 
 header ul {
     display: inline-block;
-    background: rgba(238, 238, 238, 0.75);
+    background: rgba(var(--text-color-light-rgb), 0.75);
     text-align: center;
     padding: 10px;
     margin: 0;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     border-radius: 4px;
-    padding: 0;
-    margin: 0;
 }
 
 header li {
@@ -96,19 +117,19 @@ header li {
 
 header a {
     display: block;
-    color: #2F470E;
+    color: var(--primary-color);
     padding: 10px;
 }
 
 header a:hover {
-    color: #2F470E;
+    color: var(--primary-color);
     text-decoration: none;
-    background: #e0e0e0;
+    background: var(--background-lighter);
     border-radius: 4px;
 }
 
 header a:focus {
-    color: #2F470E;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
@@ -131,24 +152,24 @@ header.sticky {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: #2F470E;
+    color: var(--primary-color);
     font-size: 1.5em;
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: #e0e0e0;
+    background: var(--background-lighter);
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: #e0e0e0;
+    background: var(--background-lighter);
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
     cursor: pointer;
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 #mobile-menu-close span {
@@ -169,8 +190,8 @@ footer {
 }
 
 .copyright p {
-    margin: 0;
-    color: #3D3E40;
+    margin: 0; /* Consider a variable for margin-bottom on paragraphs */
+    color: var(--text-color-dark);
 }
 
 .top {
@@ -184,12 +205,12 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #b9bfc4;
+    border: 3px solid var(--border-color);
     text-align: center;
 }
 
 .top i {
-    color: #3D3E40;
+    color: var(--text-color-dark);
 }
 
 .social {
@@ -197,8 +218,8 @@ footer {
 }
 
 .social ul {
-    margin: 5px 0 0 0;
-    padding: 0;
+    margin: 5px 0 0 0; /* Consider a variable for margin-top on social icons */
+    padding: 0; /* Consider a variable for padding on social icons */
 }
 
 .social li {
@@ -209,27 +230,27 @@ footer {
 
 .social a {
     display: block;
-    color: #3D3E40;
+    color: var(--text-color-dark);
     padding: 10px;
 }
 
 .social a:hover {
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 .btn-rounded-white {
     display: inline-block;
-    color: #2F470E;
-    background: rgba(224, 224, 224, 0.75);
+    color: var(--primary-color);
+    background: rgba(var(--background-lighter-rgb), 0.75);
     padding: 15px 25px;
-    border: 3px solid #eeeeee;
+    border: 3px solid var(--text-color-light);
     border-radius: 30px;
     transition: .5s ease all;
 }
 
 .btn-rounded-white:hover {
-    color: #eeeeee;
-    background: rgba(47, 71, 14, 0.75);
+    color: var(--text-color-light);
+    background: rgba(var(--primary-color-rgb), 0.75);
     text-decoration: none;
 }
 
@@ -245,7 +266,7 @@ footer {
     position: relative;
     display: inline-block;
     font-size: 2em;
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     margin: 0 0 30px 0;
 }
 
@@ -258,11 +279,11 @@ footer {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background: #2F470E;
+    background: var(--primary-color);
 }
 
 .background-alt {
-    background: #eeeeee;
+    background: var(--background-light);
 }
 
 #lead {
@@ -291,29 +312,29 @@ footer {
 }
 
 #lead-content h1 {
-    color: #2F470E;
-    font-weight: 900;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-bold);
     font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     line-height: 0.9em;
     text-shadow:
-    -2px -2px 0 #eeeeee,
-    2px -2px 0 #eeeeee,
-    -2px 2px 0 #eeeeee,
-    2px 2px 0 #eeeeee;
+    -2px -2px 0 var(--text-color-light),
+    2px -2px 0 var(--text-color-light),
+    -2px 2px 0 var(--text-color-light),
+    2px 2px 0 var(--text-color-light);
 }
 
 #lead-content h2 {
-    color: #2F470E;
-    font-weight: 500;
+    color: var(--primary-color);
+    font-weight: var(--font-weight-normal);
     font-size: 2.25em;
     margin-bottom: 15px;
     text-shadow:
-    -1px -1px 0 #eeeeee,
-    1px -1px 0 #eeeeee,
-    -1px 1px 0 #eeeeee,
-    1px 1px 0 #eeeeee;
+    -1px -1px 0 var(--text-color-light),
+    1px -1px 0 var(--text-color-light),
+    -1px 1px 0 var(--text-color-light),
+    1px 1px 0 var(--text-color-light);
 }
 
 #lead-overlay {
@@ -336,7 +357,7 @@ footer {
     text-align: center;
     z-index: 10;
     bottom: 15px;
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 #lead-down span {
@@ -346,7 +367,7 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid #2F470E;
+    border: 3px solid var(--primary-color);
     text-align: center;
 }
 
@@ -372,26 +393,26 @@ footer {
 
 #about {
     padding: 75px 15px;
-    border-bottom: 1px solid #A68D68;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 #about h2 {
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 #about p {
-    color: #3D3E40;
+    color: var(--text-color-dark);
     margin: 0;
 }
 
 #experience {
     padding: 50px 15px;
     text-align: center;
-    border-bottom: 1px solid #A68D68;
+    border-bottom: 1px solid var(--secondary-color);
 }
 
 #experience h2 {
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 #experience-timeline {
@@ -409,7 +430,7 @@ footer {
     right: auto;
     height: 100%;
     width: 3px;
-    background: #2F470E;
+    background: var(--primary-color);
     z-index: 0;
 }
 
@@ -418,39 +439,39 @@ footer {
     content: '';
     width: 3px;
     height: 40px;
-    background: #2F470E;
-    background: linear-gradient(to bottom, #2F470E, rgba(47, 71, 14, 0));
+    background: var(--primary-color);
+    background: linear-gradient(to bottom, var(--primary-color), rgba(var(--primary-color-rgb), 0));
     top: 100%;
     left: 303px;
 }
 
 .vtimeline-content {
     margin-left: 350px;
-    background: #eeeeee;
-    border: 1px solid #A68D68;
+    background: var(--background-light);
+    border: 1px solid var(--secondary-color);
     padding: 15px;
     border-radius: 3px;
     text-align: left;
 }
 
 .vtimeline-content h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #2F470E;
+    font-size: 1.5em; /* Consider a variable like var(--font-size-h3) */
+    font-weight: var(--font-weight-light);
+    color: var(--primary-color);
     display: inline-block;
     margin: 0;
 }
 
 .vtimeline-content h4 {
-    font-size: 1.2em;
-    font-weight: 300;
-    color: #3D3E40;
+    font-size: 1.2em; /* Consider a variable like var(--font-size-h4) */
+    font-weight: var(--font-weight-light);
+    color: var(--text-color-dark);
     margin: 0 0 15px 0;
 }
 
 .vtimeline-content p {
-    color: #3D3E40;
-    font-size: 0.9em;
+    color: var(--text-color-dark);
+    font-size: var(--font-size-small);
     margin: 0;
 }
 
@@ -463,10 +484,10 @@ footer {
 
 .vtimeline-icon {
     position: relative;
-    color: #eeeeee;
+    color: var(--text-color-light);
     width: 50px;
     height: 50px;
-    background: #2F470E;
+    background: var(--primary-color);
     border-radius: 50%;
     float: left;
     z-index: 99;
@@ -485,18 +506,18 @@ footer {
     position: absolute;
     left: 0;
     top: 10px;
-    font-weight: 300;
-    color: #2F470E;
+    font-weight: var(--font-weight-light);
+    color: var(--primary-color);
 }
 
 #education {
-    padding: 50px 15px 20px 15px;
-    border-bottom: 1px solid #A68D68;
+    padding: 50px 15px 20px 15px; /* Consider a variable for section padding */
+    border-bottom: 1px solid var(--secondary-color);
     text-align: center;
 }
 
 #education h2 {
-    color: #2F470E;
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
@@ -504,34 +525,34 @@ footer {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid #A68D68;
+    border: 1px solid var(--secondary-color);
     text-align: left;
 }
 
 .education-block h3 {
-    font-weight: 500;
+    font-weight: var(--font-weight-normal);
     float: left;
     margin: 0;
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 .education-block span {
-    color: #3D3E40;
+    color: var(--text-color-dark);
     float: right;
 }
 
 .education-block h4 {
-    color: #3D3E40;
+    color: var(--text-color-dark);
     clear: both;
-    font-weight: 500;
+    font-weight: var(--font-weight-normal);
     margin: 0 0 15px 0;
 }
 
 .education-block p,
 .education-block ul {
     margin: 0;
-    color: #3D3E40;
-    font-size: 0.9em;
+    color: var(--text-color-dark);
+    font-size: var(--font-size-small);
 }
 
 .education-block ul {
@@ -540,12 +561,12 @@ footer {
 
 #projects {
     padding: 50px 15px;
-    border-bottom: 1px solid #A68D68;
+    border-bottom: 1px solid var(--secondary-color);
     text-align: center;
 }
 
 #projects h2 {
-    color: #2F470E;
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
@@ -559,7 +580,7 @@ footer {
 .project {
     position: relative;
     overflow: hidden;
-    background: #eeeeee;
+    background: var(--background-light);
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -594,35 +615,35 @@ footer {
 }
 
 .project-info h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #2F470E;
+    font-size: 1.5em; /* Consider a variable like var(--font-size-h3) */
+    font-weight: var(--font-weight-light);
+    color: var(--primary-color);
     margin: 0 0 15px 0;
 }
 
 .project-info p {
-    color: #3D3E40;
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
+    color: var(--text-color-dark);
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on paragraphs */
+    font-size: var(--font-size-small);
 }
 
 .project-info a {
     display: inline-block;
     padding: 10px 15px;
-    background-color: #2F470E;
-    color: #eeeeee;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
     text-decoration: none;
     text-align: center;
     margin-top: auto;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    font-size: 0.9em;
+    font-size: var(--font-size-small);
 }
 
 .project-info a:hover {
-    background-color: #eeeeee;
-    color: #2F470E;
-    border: 1px solid #2F470E;
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .project.gallery {
@@ -650,8 +671,8 @@ footer {
 }
 
 .project.gallery .gallery-item p{
-    font-size: 0.8em;
-    color: #3D3E40;
+    font-size: var(--font-size-xsmall);
+    color: var(--text-color-dark);
     text-align: center;
 }
 
@@ -685,14 +706,14 @@ footer {
 }
 
 #skills h2 {
-    color: #2F470E;
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
 #skills ul {
     display: block;
     margin: 0 auto;
-    padding: 0;
+    padding: 0; /* Consider a variable for padding on skills list */
     max-width: 800px;
 }
 
@@ -700,8 +721,8 @@ footer {
     display: inline-block;
     margin: 7px;
     padding: 5px 10px;
-    color: #2F470E;
-    background: #e0e0e0;
+    color: var(--primary-color);
+    background: var(--background-lighter);
     list-style: none;
     cursor: default;
     font-size: 1.2em;
@@ -713,7 +734,7 @@ footer {
 }
 
 #affiliations h2 {
-    color: #2F470E;
+    color: var(--primary-color);
     margin-bottom: 50px;
 }
 
@@ -727,7 +748,7 @@ footer {
 }
 
 .affiliation-item {
-    background: #eeeeee;
+    background: var(--background-light);
     border-radius: 4px;
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -744,7 +765,7 @@ footer {
     align-items: center;
     padding: 20px;
     text-decoration: none;
-    color: #3D3E40;
+    color: var(--text-color-dark);
     height: 100%;
 }
 
@@ -756,65 +777,65 @@ footer {
 
 #contact {
     padding: 50px 15px;
-    background: #2F470E;
+    background: var(--primary-color);
     text-align: center;
 }
 
 #contact h2 {
-    margin: 0 0 15px 0;
-    color: #eeeeee;
-    font-weight: 500;
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on headings */
+    color: var(--text-color-light);
+    font-weight: var(--font-weight-normal);
 }
 
 #contact p  {
-    color: #eeeeee;
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
+    color: var(--text-color-light);
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on paragraphs */
+    font-size: var(--font-size-small);
 }
 
 #contact a {
-    color: #eeeeee;
-    margin: 0 0 15px 0;
-    font-size: 0.9em;
+    color: var(--text-color-light);
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on links */
+    font-size: var(--font-size-small);
 }
 
 .optional-section {
     padding: 50px 15px;
-    text-align: center;
-    border-top: 1px solid #A68D68;
+    text-align: center; /* Consider a variable for section padding */
+    border-top: 1px solid var(--secondary-color);
 }
 
 .optional-section h2 {
-    color: #2F470E;
+    color: var(--primary-color);
 }
 
 .optional-section-block {
     max-width: 700px;
     margin: 0 auto 30px auto;
     padding: 15px;
-    border: 1px solid #A68D68;
-    background: #eeeeee;
+    border: 1px solid var(--secondary-color);
+    background: var(--background-light);
     text-align: left;
 }
 
 .optional-section-block h3 {
-    font-weight: 500;
-    margin: 0 0 15px 0;
-    color: #2F470E;
+    font-weight: var(--font-weight-normal);
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on headings */
+    color: var(--primary-color);
 }
 
 .optional-section-block h4 {
-    color: #3D3E40;
+    color: var(--text-color-dark);
     clear: both;
-    font-weight: 500;
-    margin: 0 0 15px 0;
+    font-weight: var(--font-weight-normal);
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on headings */
 }
 
 .optional-section-block p,
 .optional-section-block ul {
-    margin: 0 0 15px 0;
-    color: #3D3E40;
-    font-size: 0.9em;
+    margin: 0 0 15px 0; /* Consider a variable for margin-bottom on paragraphs */
+    color: var(--text-color-dark);
+    font-size: var(--font-size-small);
 }
 
 .optional-section-block ul {
