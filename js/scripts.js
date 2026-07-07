@@ -1,7 +1,7 @@
 /*!
     Title: GIS Portfolio
-    Version: 1.1
-    Last Change: 12/31/2025
+    Version: 1.3
+    Last Change: 07/07/2026
     Author: Colin T. stiles
     Repo: https://github.com/colinstiles/cts-gis-portfolio
 */
