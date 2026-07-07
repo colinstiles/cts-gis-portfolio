@@ -19,8 +19,8 @@
     --text-color-light: #eeeeee; /* Light Grey */
     --text-color-light-rgb: 238, 238, 238;
     --background-light: #eeeeee; /* Light Grey Background */
-    --background-lighter: #e0e0e0; /* Slightly Darker Light Grey Background */
-    --background-lighter-rgb: 224, 224, 224;
+    --background-dark: #d3d3d3; /* Slightly Darker Light Grey Background */
+    --background-dark-rgb: 224, 224, 224;
     --border-color: #dcd9d9;
 
     /* Fonts */
@@ -44,7 +44,7 @@ body.active {
 }
 
 .no-js #experience-timeline>div {
-    background: var(--background-lighter);
+    background: var(--background-light);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid var(--border-color);
@@ -157,14 +157,14 @@ header.sticky {
     z-index: 20;
     padding: 0 7px;
     border-radius: 4px;
-    background: var(--background-lighter);
+    background: var(--background-light);
 }
 
 #mobile-menu-close {
     display: none;
     text-align: right;
     width: 100%;
-    background: var(--background-lighter);
+    background: var(--background-light);
     font-size: 1.5em;
     padding-right: 15px;
     padding-top: 10px;
@@ -241,7 +241,7 @@ footer {
 .btn-rounded-white {
     display: inline-block;
     color: var(--primary-color);
-    background: rgba(var(--background-lighter-rgb), 0.75);
+    background: rgba(var(--background-light-rgb), 0.75);
     padding: 15px 25px;
     border: 3px solid var(--text-color-light);
     border-radius: 30px;
@@ -283,7 +283,7 @@ footer {
 }
 
 .background-alt {
-    background: var(--background-light);
+    background: var(--background-dark);
 }
 
 #lead {
@@ -408,7 +408,7 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
-    background: var(--background-light);
+    background: var(--background-dark);
     border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -448,7 +448,7 @@ footer {
 
 .vtimeline-content {
     margin-left: 350px;
-    background: var(--background-light);
+    background: var(--background-dark);
     border: 1px solid var(--secondary-color);
     padding: 15px;
     border-radius: 3px;
@@ -515,6 +515,7 @@ footer {
     padding: 50px 15px 20px 15px; /* Consider a variable for section padding */
     border-bottom: 1px solid var(--secondary-color);
     text-align: center;
+    background: var(--background-light);
 }
 
 #education h2 {
@@ -563,7 +564,7 @@ footer {
 #projects {
     padding: 50px 15px;
     border-bottom: 1px solid var(--secondary-color);
-    background: var(--background-light);
+    background: var(--background-dark);
     text-align: center;
 }
 
@@ -706,6 +707,7 @@ footer {
     padding: 50px 15px;
     text-align: center;
     border-bottom: 1px solid var(--secondary-color);
+    background: var(--background-light);
 }
 
 #affiliations h2 {
@@ -723,7 +725,7 @@ footer {
 }
 
 .affiliation-item {
-    background: #fff;
+    background: var(--background-dark);
     border-radius: 4px;
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -756,7 +758,7 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
-    background: var(--background-light);
+    background: var(--background-dark);
 }
 
 #skills h2 {
