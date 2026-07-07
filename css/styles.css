@@ -703,6 +703,7 @@ footer {
 #skills {
     padding: 50px 15px;
     text-align: center;
+    background: var(--background-lighter);
 }
 
 #skills h2 {
@@ -722,7 +723,7 @@ footer {
     margin: 7px;
     padding: 5px 10px;
     color: var(--primary-color);
-    background: var(--background-lighter);
+    background: var(--background-light);
     list-style: none;
     cursor: default;
     font-size: 1.2em;
@@ -731,6 +732,7 @@ footer {
 #affiliations {
     padding: 50px 15px;
     text-align: center;
+    background: var(--background-light);
 }
 
 #affiliations h2 {
@@ -767,11 +769,14 @@ footer {
     text-decoration: none;
     color: var(--text-color-dark);
     height: 100%;
+    font-weight: var(--font-weight-normal);
+    font-size: 1.2em;
 }
 
 .affiliation-item img {
     height: 80px;
     margin-bottom: 15px;
+    max-width: 100%;
     object-fit: contain;
 }
 
