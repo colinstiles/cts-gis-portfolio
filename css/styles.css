@@ -122,9 +122,9 @@ header a {
 }
 
 header a:hover {
-    color: var(--primary-color);
+    color: var(--text-color-light);
     text-decoration: none;
-    background: var(--background-lighter);
+    background: var(--primary-color);
     border-radius: 4px;
 }
 
@@ -408,6 +408,7 @@ footer {
 #experience {
     padding: 50px 15px;
     text-align: center;
+    background: var(--background-light);
     border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -562,6 +563,7 @@ footer {
 #projects {
     padding: 50px 15px;
     border-bottom: 1px solid var(--secondary-color);
+    background: var(--background-light);
     text-align: center;
 }
 
@@ -700,39 +702,9 @@ footer {
     display: none;
 }
 
-#skills {
-    padding: 50px 15px;
-    text-align: center;
-    background: var(--background-lighter);
-}
-
-#skills h2 {
-    color: var(--primary-color);
-    margin-bottom: 50px;
-}
-
-#skills ul {
-    display: block;
-    margin: 0 auto;
-    padding: 0; /* Consider a variable for padding on skills list */
-    max-width: 800px;
-}
-
-#skills li {
-    display: inline-block;
-    margin: 7px;
-    padding: 5px 10px;
-    color: var(--primary-color);
-    background: var(--background-light);
-    list-style: none;
-    cursor: default;
-    font-size: 1.2em;
-}
-
 #affiliations {
     padding: 50px 15px;
     text-align: center;
-    background: var(--background-light);
 }
 
 #affiliations h2 {
@@ -778,6 +750,35 @@ footer {
     margin-bottom: 15px;
     max-width: 100%;
     object-fit: contain;
+}
+
+#skills {
+    padding: 50px 15px;
+    text-align: center;
+    background: var(--background-light);
+}
+
+#skills h2 {
+    color: var(--primary-color);
+    margin-bottom: 50px;
+}
+
+#skills ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0; /* Consider a variable for padding on skills list */
+    max-width: 800px;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 7px;
+    padding: 5px 10px;
+    color: var(--primary-color);
+    background: var(--background-light);
+    list-style: none;
+    cursor: default;
+    font-size: 1.2em;
 }
 
 #contact {
