@@ -848,7 +848,14 @@ footer {
 }
 
 .top {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
     text-align: center;
+    z-index: 10;
+    top: 15px;
+    color: var(--primary-color);
 }
 
 .top span {
@@ -858,12 +865,14 @@ footer {
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 3px solid var(--border-color);
+    border: 3px solid var(--primary-color);
     text-align: center;
 }
 
 .top i {
-    color: var(--text-color-dark);
+    animation: pulsate 1.5s ease;
+    animation-iteration-count: infinite;
+    padding-top: 5px;
 }
 
 .social {
@@ -872,25 +881,38 @@ footer {
 
 .social ul {
     margin: 5px 0 0 0; /* Consider a variable for margin-top on social icons */
-    padding: 0; /* Consider a variable for padding on social icons */
+    padding: 2px; /* Consider a variable for padding on social icons */
 }
 
 .social li {
     display: inline-block;
+    position: relative;
     font-size: 1.25em;
     list-style: none;
+    margin: 0 5px;
 }
 
 .social .social-label {
-    display: none;
-    font-size: 0.7em;
-    vertical-align: middle;
-    margin-left: 5px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--text-color-dark);
+    color: var(--text-color-light);
+    text-align: center;
+    border-radius: 4px;
+    padding: 5px 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-size: 0.8em;
+    white-space: nowrap;
 }
 
 .social a:hover .social-label {
-    display: inline;
-    color: var(--text-color-dark);
+    visibility: visible;
+    opacity: 1;
 }
 
 @media only screen and (max-width: 750px) {
