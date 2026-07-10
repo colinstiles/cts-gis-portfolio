@@ -686,7 +686,7 @@ Affiliations
 .affiliation-item {
     background: var(--text-color-dark);
     border-radius: 4px;
-    width: 250px;
+    width: 220px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -757,7 +757,7 @@ Contact
 
 #contact {
     padding: 50px 15px;
-    background: var(--primary-color);
+    background: var(--secondary-color);
     text-align: center;
 }
 
@@ -770,13 +770,14 @@ Contact
 #contact p  {
     color: var(--text-color-light);
     margin: 0 0 15px 0; /* Consider a variable for margin-bottom on paragraphs */
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-normal);
 }
 
 #contact a {
     color: var(--text-color-light);
     margin: 0 0 15px 0; /* Consider a variable for margin-bottom on links */
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-normal);
+    font-weight: var(--font-weight-bold);
 }
 
 /*
