@@ -233,6 +233,25 @@ header.sticky {
     1px 1px 0 var(--text-color-light);
 }
 
+#lead-content .btn-resume {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-weight: var(--font-weight-normal);
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#lead-content .btn-resume:hover {
+    background: var(--primary-color);
+    color: var(--text-color-light);
+    text-decoration: none;
+}
+
 #lead-overlay {
     position: absolute;
     height: 100%;
