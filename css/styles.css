@@ -228,21 +228,21 @@ header.sticky {
     font-size: 2.25em;
     margin-bottom: 15px;
     text-shadow:
-    -1px -1px 0 var(--text-color-light),
-    1px -1px 0 var(--text-color-light),
-    -1px 1px 0 var(--text-color-light),
-    1px 1px 0 var(--text-color-light);
+    -2px -2px 0 var(--text-color-light),
+    2px -2px 0 var(--text-color-light),
+    -2px 2px 0 var(--text-color-light),
+    2px 2px 0 var(--text-color-light);
 }
 
 #lead-content .btn-resume {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
-    font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-bold);
     text-transform: uppercase;
     color: var(--primary-color);
-    background-color: transparent;
-    border: 2px solid var(--primary-color);
+    background: rgba(var(--text-color-light-rgb), 0.75);
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     transition: all 0.3s ease;
 }
@@ -349,7 +349,7 @@ Experience
     text-align: center;
     background: var(--background-dark);
     border-bottom: 1px solid var(--secondary-color);
-    background: var(--background-light);
+    background: var(--background-dark);
     border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -389,7 +389,7 @@ Experience
 
 .vtimeline-content {
     margin-left: 350px;
-    background: var(--background-dark);
+    background: var(--background-light);
     border: 1px solid var(--secondary-color);
     padding: 15px;
     border-radius: 3px;
