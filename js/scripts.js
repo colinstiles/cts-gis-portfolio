@@ -93,4 +93,9 @@
         });
     });
 
+    // Stop scrolling animation on user interaction
+    $('html, body').on('mousewheel DOMMouseScroll', function() {
+        $('html, body').stop();
+    });
+
 })(jQuery);
