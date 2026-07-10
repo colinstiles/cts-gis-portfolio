@@ -317,10 +317,15 @@ About
 
 .about-me-img {
     border-radius: 50%;
-    max-width: 200px;
+    max-width: 250px;
     margin: 20px auto;
     display: block;
-    border: 3px solid var(--primary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+#about .heading {
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes pulsate {
