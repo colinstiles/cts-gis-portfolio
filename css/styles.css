@@ -879,6 +879,7 @@ footer {
 .top i {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
+    color: var(--primary-color);
     padding-bottom: 5px;
 }
 
