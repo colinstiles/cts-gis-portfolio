@@ -863,7 +863,7 @@ footer {
     width: 100%;
     text-align: center;
     z-index: 10;
-    top: 15px;
+    bottom: 15px;
     color: var(--primary-color);
 }
 
