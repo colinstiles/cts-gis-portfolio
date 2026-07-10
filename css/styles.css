@@ -872,7 +872,7 @@ footer {
 .top i {
     animation: pulsate 1.5s ease;
     animation-iteration-count: infinite;
-    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .social {
