@@ -1,7 +1,7 @@
 /*!
     Title: GIS Portfolio
-    Version: 1.3
-    Last Change: 07/07/2026
+    Version: 1.5
+    Last Change: 07/010/2026
     Author: Colin T. Stiles
     Repo: https://github.com/colinstiles/cts-gis-portfolio
 
@@ -12,16 +12,16 @@
 
 :root {
     /* Colors */
-    --primary-color: #2F470E; /* Dark Green */
-    --primary-color-rgb: 47, 71, 14;
-    --secondary-color: #A68D68; /* Brownish */
-    --text-color-dark: #3D3E40; /* Dark Grey */
-    --text-color-light: #eeeeee; /* Light Grey */
-    --text-color-light-rgb: 238, 238, 238;
-    --background-light: #ffffff; /* Light Grey Background */
-    --background-dark: #eeeeee; /* Slightly Darker Light Grey Background */
-    --background-dark-rgb: 224, 224, 224;
-    --border-color: #dcd9d9;
+    --primary-color: #556B2F; /* Dark Olive Green */
+    --primary-color-rgb: 85, 107, 47;
+    --secondary-color: #8B4513; /* Saddle Brown */
+    --text-color-dark: #4B3A26; /* Dark Brown */
+    --text-color-light: #F5F5DC; /* Beige */
+    --text-color-light-rgb: 245, 245, 220;
+    --background-light: #FCFBF4; /* Very Light Cream */
+    --background-dark: #EAE7DC; /* Light Tan */
+    --background-dark-rgb: 234, 231, 220;
+    --border-color: #D2B48C; /* Tan */
 
     /* Fonts */
     --font-family-base: 'Lato', sans-serif;
@@ -76,15 +76,11 @@ body.active {
     content: none;
 }
 
-@keyframes dropHeader {
-    0% {
-        transform: translateY(-100%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
+/*
+========================================
+Header
+========================================
+*/
 
 header {
     position: absolute;
@@ -97,7 +93,7 @@ header {
     animation-iteration-count: 1;
     animation-timing-function: ease;
     animation-duration: 0.75s;
-    background: transparent;
+    background: transparent; /* This is acceptable, but could be a variable if needed */
 }
 
 header ul {
@@ -109,6 +105,11 @@ header ul {
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
     border-radius: 4px;
+}
+
+header .social-link a {
+    padding: 10px 12px;
+    font-size: 1.2em;
 }
 
 header li {
@@ -181,111 +182,6 @@ header.sticky {
     vertical-align: middle;
 }
 
-footer {
-    padding: 50px 0;
-}
-
-.copyright {
-    padding-top: 20px;
-}
-
-.copyright p {
-    margin: 0; /* Consider a variable for margin-bottom on paragraphs */
-    color: var(--text-color-dark);
-}
-
-.top {
-    text-align: center;
-}
-
-.top span {
-    cursor: pointer;
-    display: block;
-    margin: 15px auto 0 auto;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 3px solid var(--border-color);
-    text-align: center;
-}
-
-.top i {
-    color: var(--text-color-dark);
-}
-
-.social {
-    text-align: right;
-}
-
-.social ul {
-    margin: 5px 0 0 0; /* Consider a variable for margin-top on social icons */
-    padding: 0; /* Consider a variable for padding on social icons */
-}
-
-.social li {
-    display: inline-block;
-    font-size: 1.25em;
-    list-style: none;
-}
-
-.social a {
-    display: block;
-    color: var(--text-color-dark);
-    padding: 10px;
-}
-
-.social a:hover {
-    color: var(--primary-color);
-}
-
-.btn-rounded-white {
-    display: inline-block;
-    color: var(--primary-color);
-    background: rgba(var(--background-light-rgb), 0.75);
-    padding: 15px 25px;
-    border: 3px solid var(--text-color-light);
-    border-radius: 30px;
-    transition: .5s ease all;
-}
-
-.btn-rounded-white:hover {
-    color: var(--text-color-light);
-    background: rgba(var(--primary-color-rgb), 0.75);
-    text-decoration: none;
-}
-
-.shadow {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-}
-
-.shadow-large {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-.heading {
-    position: relative;
-    display: inline-block;
-    font-size: 2em;
-    font-weight: var(--font-weight-light);
-    margin: 0 0 30px 0;
-}
-
-.heading:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    height: 1px;
-    width: 50px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    background: var(--primary-color);
-}
-
-.background-alt {
-    background: var(--background-dark);
-}
-
 #lead {
     position: relative;
     height: 100vh;
@@ -345,7 +241,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: transparent;
+    background: transparent; /* This is acceptable, but could be a variable if needed */
     z-index: 1;
 }
 
@@ -377,6 +273,22 @@ footer {
     padding-top: 5px;
 }
 
+@keyframes dropHeader {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/*
+========================================
+About
+========================================
+*/
+
 @keyframes pulsate {
     0% {
         transform: scale(1, 1);
@@ -391,12 +303,6 @@ footer {
     }
 }
 
-#about {
-    padding: 75px 15px;
-    border-bottom: 1px solid var(--secondary-color);
-    background: var(--background-light);
-}
-
 #about h2 {
     color: var(--primary-color);
 }
@@ -406,10 +312,18 @@ footer {
     margin: 0;
 }
 
+/*
+========================================
+Experience
+========================================
+*/
+
 #experience {
     padding: 50px 15px;
     text-align: center;
     background: var(--background-dark);
+    border-bottom: 1px solid var(--secondary-color);
+    background: var(--background-light);
     border-bottom: 1px solid var(--secondary-color);
 }
 
@@ -512,6 +426,12 @@ footer {
     color: var(--primary-color);
 }
 
+/*
+========================================
+Education
+========================================
+*/
+
 #education {
     padding: 50px 15px 20px 15px; /* Consider a variable for section padding */
     border-bottom: 1px solid var(--secondary-color);
@@ -562,6 +482,12 @@ footer {
     padding: 0 0 0 15px;
 }
 
+/*
+========================================
+Projects
+========================================
+*/
+
 #projects {
     padding: 50px 15px;
     border-bottom: 1px solid var(--secondary-color);
@@ -584,15 +510,15 @@ footer {
 .project {
     position: relative;
     overflow: hidden;
-    background: #fff;
+    background: var(--background-light);
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(var(--primary-color-rgb), 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 6px 12px rgba(var(--primary-color-rgb), 0.2);
 }
 
 .project-image {
@@ -704,6 +630,12 @@ footer {
     display: none;
 }
 
+/*
+========================================
+Affiliations
+========================================
+*/
+
 #affiliations {
     padding: 50px 15px;
     text-align: center;
@@ -756,6 +688,12 @@ footer {
     object-fit: contain;
 }
 
+/*
+========================================
+Skills
+========================================
+*/
+
 #skills {
     padding: 50px 15px;
     text-align: center;
@@ -785,6 +723,12 @@ footer {
     font-size: 1.2em;
 }
 
+/*
+========================================
+Contact
+========================================
+*/
+
 #contact {
     padding: 50px 15px;
     background: var(--primary-color);
@@ -808,6 +752,12 @@ footer {
     margin: 0 0 15px 0; /* Consider a variable for margin-bottom on links */
     font-size: var(--font-size-small);
 }
+
+/*
+========================================
+Optional Section
+========================================
+*/
 
 .optional-section {
     padding: 50px 15px;
@@ -850,6 +800,59 @@ footer {
 
 .optional-section-block ul {
     padding: 0 0 0 15px;
+}
+
+/*
+========================================
+Footer
+========================================
+*/
+
+footer {
+    padding: 50px 0;
+}
+
+.copyright {
+    padding-top: 20px;
+}
+
+.copyright p {
+    margin: 0; /* Consider a variable for margin-bottom on paragraphs */
+    color: var(--text-color-dark);
+}
+
+.top {
+    text-align: center;
+}
+
+.top span {
+    cursor: pointer;
+    display: block;
+    margin: 15px auto 0 auto;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    text-align: center;
+}
+
+.top i {
+    color: var(--text-color-dark);
+}
+
+.social {
+    text-align: right;
+}
+
+.social ul {
+    margin: 5px 0 0 0; /* Consider a variable for margin-top on social icons */
+    padding: 0; /* Consider a variable for padding on social icons */
+}
+
+.social li {
+    display: inline-block;
+    font-size: 1.25em;
+    list-style: none;
 }
 
 @media only screen and (max-width: 750px) {
