@@ -881,6 +881,18 @@ footer {
     list-style: none;
 }
 
+.social .social-label {
+    display: none;
+    font-size: 0.7em;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.social a:hover .social-label {
+    display: inline;
+    color: var(--text-color-dark);
+}
+
 @media only screen and (max-width: 750px) {
     #experience-timeline:before,
     #experience-timeline:after {
