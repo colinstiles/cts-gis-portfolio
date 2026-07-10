@@ -241,7 +241,7 @@ header.sticky {
     font-weight: var(--font-weight-normal);
     text-transform: uppercase;
     color: var(--primary-color);
-    background: transparent;
+    background-color: transparent;
     border: 2px solid var(--primary-color);
     border-radius: 4px;
     transition: all 0.3s ease;
