@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <title>Cartography Portfolios</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #ffffff;
+      color: #20232a;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: url('background.svg') center center / cover no-repeat;
+      opacity: 0.5;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      margin: 10px;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 18px 40px rgba(16, 24, 40, 0.08);
+      padding: 24px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2rem;
+    }
+    p {
+      color: #4f596a;
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .btn {
+      border: none;
+      border-radius: 999px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+    .btn-random {
+      background: #cf2e2e;
+      color: #ffffff;
+    }
+    .btn-refresh {
+      background: #e5e7eb;
+      color: #111827;
+    }
+    .site-count {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 12px;
+      font-size: 1rem;
+      color: #4b5563;
+      background: #f8fafc;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+    .list-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .site-name {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #111827;
+    }
+    a {
+      color: #cf2e2e;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .site-link {
+      font-size: 0.875rem;
+      font-weight: 200;
+      word-break: break-all;
+    }
+    .site-link:hover {
+      text-decoration: underline;
+    }
+    .info {
+      margin-top: 24px;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cartography Portfolios</h1>
+    <p>Find map inspiration among peers. Get a random portfolio or browse the shuffled list below.</p>
+
+    <div class="actions">
+      <button class="btn btn-random" id="randomButton">Random Portfolio</button>
+      <button class="btn btn-refresh" id="refreshButton">Shuffle</button>
+      <button class="btn btn-refresh" id="sortButton">Sort A-Z</button>
+      <button class="btn btn-refresh" id="infoButton">Info</button>
+      <span id="siteCount" class="site-count"></span>
+    </div>
+
+    <ul class="list" id="siteList"></ul>
+
+    <p class="info" id="infoSection"><b>What this site is:</b> A resource for cartographers to quickly find inspiration among peers.</p>
+
+    <p class="info"><b>What this site is <i>not</i>:</b> An endorsement (or snub) of any individual or their work, nor is it intended to
+       generate clients or sales (though some store pages may be linked directly where an individual has no equivalent portfolio). 
+    </p>
+
+    <p class="info"><b>Want to add/edit/remove?</b> Reach out to koelker12 @ the email service provided by Google. You can also check out the <a href="https://github.com/koelker12/cartography-portfolios" target="_blank" rel="noopener noreferrer">GitHub repo</a> for more information.</p>
+    <div class="actions" style="margin-top: 16px; justify-content: flex-start;">
+      <button class="btn btn-refresh" id="backToTopButton">Back to the Top</button>
+    </div>
+  </div>
+
+  <script src="sites.js"></script>
+  <script>
+    const siteList = document.getElementById('siteList');
+    const randomButton = document.getElementById('randomButton');
+    const refreshButton = document.getElementById('refreshButton');
+    const sortButton = document.getElementById('sortButton');
+    const infoButton = document.getElementById('infoButton');
+    const backToTopButton = document.getElementById('backToTopButton');
+    const siteCount = document.getElementById('siteCount');
+    const infoSection = document.getElementById('infoSection');
+
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    shuffle(sites);
+
+    function getActiveSites() {
+      return sites.filter(site => site.status !== 'inactive');
+    }
+
+    function updateSiteCount() {
+      const activeSites = getActiveSites();
+      siteCount.textContent = `${activeSites.length} links! That's a lot of maps!`;
+    }
+
+    function renderSites() {
+      siteList.innerHTML = '';
+      updateSiteCount();
+      const activeSites = getActiveSites();
+      activeSites.forEach(site => {
+        const item = document.createElement('li');
+        item.className = 'list-item';
+
+        const title = document.createElement('p');
+        title.className = 'site-name';
+        title.textContent = site.name;
+
+        const link = document.createElement('a');
+        link.className = 'site-link';
+        link.href = site.url;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = site.url;
+
+        item.appendChild(title);
+        item.appendChild(link);
+        siteList.appendChild(item);
+      });
+    }
+
+    function openRandomSite() {
+      const activeSites = getActiveSites();
+      if (!activeSites.length) return;
+      const randomIndex = Math.floor(Math.random() * activeSites.length);
+      window.open(activeSites[randomIndex].url, '_blank');
+    }
+
+    randomButton.addEventListener('click', openRandomSite);
+    refreshButton.addEventListener('click', () => {
+      shuffle(sites);
+      renderSites();
+    });
+    sortButton.addEventListener('click', () => {
+      sites.sort((a, b) => a.name.localeCompare(b.name));
+      renderSites();
+    });
+    infoButton.addEventListener('click', () => {
+      infoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    renderSites();
+  </script>
+</body>
+</html>
