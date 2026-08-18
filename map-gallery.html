@@ -9,88 +9,288 @@
     <style>
         body {
             background: #f6f7fb;
+            color: #374054;
         }
 
-        .gallery-section {
-            margin: 48px 0 32px;
+        .gallery-shell {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 40px 18px 56px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: 24px;
+            align-items: start;
+        }
+
+        .gallery-item {
+            grid-column: span 4;
+        }
+
+        .gallery-item--wide {
+            grid-column: span 6;
+        }
+
+        .gallery-item--stagger {
+            margin-top: 38px;
         }
 
         .gallery-card {
             background: #fff;
-            border-radius: 8px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(55, 64, 84, 0.12);
+            box-shadow: 0 14px 38px rgba(55, 64, 84, 0.12);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 44px rgba(55, 64, 84, 0.18);
         }
 
         .gallery-card a {
             display: block;
         }
 
-        .gallery-card img {
+        .gallery-frame {
+            background: linear-gradient(180deg, #edf2f8 0%, #e5ebf4 100%);
+            padding: 14px;
+        }
+
+        .gallery-frame img {
             display: block;
             width: 100%;
-            height: auto;
+            height: 260px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 8px;
             background: #e9edf5;
+        }
+
+        .gallery-item--wide .gallery-frame img {
+            height: 320px;
+        }
+
+        @media (max-width: 1199px) {
+            .gallery-item,
+            .gallery-item--wide {
+                grid-column: span 6;
+            }
+
+            .gallery-item--stagger {
+                margin-top: 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .gallery-shell {
+                padding: 24px 14px 40px;
+            }
+
+            .gallery-grid {
+                gap: 18px;
+            }
+
+            .gallery-item,
+            .gallery-item--wide {
+                grid-column: span 12;
+            }
+
+            .gallery-item--stagger {
+                margin-top: 0;
+            }
+
+            .gallery-frame img,
+            .gallery-item--wide .gallery-frame img {
+                height: auto;
+            }
         }
     </style>
 </head>
 <body>
-    <main class="container">
-        <div class="row gallery-section">
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map1.png" target="_blank" rel="noopener noreferrer"><img src="images/map1.png" alt="Map 1"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map2.png" target="_blank" rel="noopener noreferrer"><img src="images/map2.png" alt="Map 2"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map3.png" target="_blank" rel="noopener noreferrer"><img src="images/map3.png" alt="Map 3"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map4.png" target="_blank" rel="noopener noreferrer"><img src="images/map4.png" alt="Map 4"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map5.png" target="_blank" rel="noopener noreferrer"><img src="images/map5.png" alt="Map 5"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map6.png" target="_blank" rel="noopener noreferrer"><img src="images/map6.png" alt="Map 6"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map7.png" target="_blank" rel="noopener noreferrer"><img src="images/map7.png" alt="Map 7"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map8.png" target="_blank" rel="noopener noreferrer"><img src="images/map8.png" alt="Map 8"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map9.png" target="_blank" rel="noopener noreferrer"><img src="images/map9.png" alt="Map 9"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map10.png" target="_blank" rel="noopener noreferrer"><img src="images/map10.png" alt="Map 10"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map11.png" target="_blank" rel="noopener noreferrer"><img src="images/map11.png" alt="Map 11"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map12.png" target="_blank" rel="noopener noreferrer"><img src="images/map12.png" alt="Map 12"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map13.png" target="_blank" rel="noopener noreferrer"><img src="images/map13.png" alt="Map 13"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map14.png" target="_blank" rel="noopener noreferrer"><img src="images/map14.png" alt="Map 14"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map15.png" target="_blank" rel="noopener noreferrer"><img src="images/map15.png" alt="Map 15"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map16.png" target="_blank" rel="noopener noreferrer"><img src="images/map16.png" alt="Map 16"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map17.png" target="_blank" rel="noopener noreferrer"><img src="images/map17.png" alt="Map 17"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map18.png" target="_blank" rel="noopener noreferrer"><img src="images/map18.png" alt="Map 18"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map19.png" target="_blank" rel="noopener noreferrer"><img src="images/map19.png" alt="Map 19"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map20.png" target="_blank" rel="noopener noreferrer"><img src="images/map20.png" alt="Map 20"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map21.png" target="_blank" rel="noopener noreferrer"><img src="images/map21.png" alt="Map 21"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map22.png" target="_blank" rel="noopener noreferrer"><img src="images/map22.png" alt="Map 22"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map23.png" target="_blank" rel="noopener noreferrer"><img src="images/map23.png" alt="Map 23"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map24.png" target="_blank" rel="noopener noreferrer"><img src="images/map24.png" alt="Map 24"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map25.png" target="_blank" rel="noopener noreferrer"><img src="images/map25.png" alt="Map 25"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map26.png" target="_blank" rel="noopener noreferrer"><img src="images/map26.png" alt="Map 26"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map27.png" target="_blank" rel="noopener noreferrer"><img src="images/map27.png" alt="Map 27"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map28.png" target="_blank" rel="noopener noreferrer"><img src="images/map28.png" alt="Map 28"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map29.png" target="_blank" rel="noopener noreferrer"><img src="images/map29.png" alt="Map 29"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map30.png" target="_blank" rel="noopener noreferrer"><img src="images/map30.png" alt="Map 30"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map31.png" target="_blank" rel="noopener noreferrer"><img src="images/map31.png" alt="Map 31"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map32.png" target="_blank" rel="noopener noreferrer"><img src="images/map32.png" alt="Map 32"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map33.png" target="_blank" rel="noopener noreferrer"><img src="images/map33.png" alt="Map 33"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map34.png" target="_blank" rel="noopener noreferrer"><img src="images/map34.png" alt="Map 34"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map35.png" target="_blank" rel="noopener noreferrer"><img src="images/map35.png" alt="Map 35"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map36.png" target="_blank" rel="noopener noreferrer"><img src="images/map36.png" alt="Map 36"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map37.png" target="_blank" rel="noopener noreferrer"><img src="images/map37.png" alt="Map 37"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map38.png" target="_blank" rel="noopener noreferrer"><img src="images/map38.png" alt="Map 38"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map39.png" target="_blank" rel="noopener noreferrer"><img src="images/map39.png" alt="Map 39"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map40.png" target="_blank" rel="noopener noreferrer"><img src="images/map40.png" alt="Map 40"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map41.png" target="_blank" rel="noopener noreferrer"><img src="images/map41.png" alt="Map 41"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map42.png" target="_blank" rel="noopener noreferrer"><img src="images/map42.png" alt="Map 42"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map43.png" target="_blank" rel="noopener noreferrer"><img src="images/map43.png" alt="Map 43"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map44.png" target="_blank" rel="noopener noreferrer"><img src="images/map44.png" alt="Map 44"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map45.png" target="_blank" rel="noopener noreferrer"><img src="images/map45.png" alt="Map 45"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map46.png" target="_blank" rel="noopener noreferrer"><img src="images/map46.png" alt="Map 46"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map47.png" target="_blank" rel="noopener noreferrer"><img src="images/map47.png" alt="Map 47"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map48.png" target="_blank" rel="noopener noreferrer"><img src="images/map48.png" alt="Map 48"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map49.png" target="_blank" rel="noopener noreferrer"><img src="images/map49.png" alt="Map 49"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map50.png" target="_blank" rel="noopener noreferrer"><img src="images/map50.png" alt="Map 50"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map51.png" target="_blank" rel="noopener noreferrer"><img src="images/map51.png" alt="Map 51"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map52.png" target="_blank" rel="noopener noreferrer"><img src="images/map52.png" alt="Map 52"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map53.png" target="_blank" rel="noopener noreferrer"><img src="images/map53.png" alt="Map 53"></a></article></div>
-            <div class="col-md-6 mb-4"><article class="gallery-card"><a href="images/map54.png" target="_blank" rel="noopener noreferrer"><img src="images/map54.png" alt="Map 54"></a></article></div>
+    <main class="gallery-shell">
+        <div class="gallery-grid">
+            <article class="gallery-item gallery-item--wide">
+                <div class="gallery-card">
+                    <a href="images/map51.png" target="_blank" rel="noopener noreferrer">
+                        <div class="gallery-frame"><img src="images/map51.png" alt="Map 51"></div>
+                    </a>
+                </div>
+            </article>
+            <article class="gallery-item gallery-item--wide gallery-item--stagger">
+                <div class="gallery-card">
+                    <a href="images/map52.png" target="_blank" rel="noopener noreferrer">
+                        <div class="gallery-frame"><img src="images/map52.png" alt="Map 52"></div>
+                    </a>
+                </div>
+            </article>
+            <article class="gallery-item gallery-item--wide">
+                <div class="gallery-card">
+                    <a href="images/map53.png" target="_blank" rel="noopener noreferrer">
+                        <div class="gallery-frame"><img src="images/map53.png" alt="Map 53"></div>
+                    </a>
+                </div>
+            </article>
+            <article class="gallery-item gallery-item--wide gallery-item--stagger">
+                <div class="gallery-card">
+                    <a href="images/map54.png" target="_blank" rel="noopener noreferrer">
+                        <div class="gallery-frame"><img src="images/map54.png" alt="Map 54"></div>
+                    </a>
+                </div>
+            </article>
+
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map1.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map1.png" alt="Map 1"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map2.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map2.png" alt="Map 2"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map3.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map3.png" alt="Map 3"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map4.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map4.png" alt="Map 4"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map5.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map5.png" alt="Map 5"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map6.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map6.png" alt="Map 6"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map7.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map7.png" alt="Map 7"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map8.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map8.png" alt="Map 8"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map9.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map9.png" alt="Map 9"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map10.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map10.png" alt="Map 10"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map11.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map11.png" alt="Map 11"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map12.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map12.png" alt="Map 12"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map13.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map13.png" alt="Map 13"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map14.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map14.png" alt="Map 14"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map15.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map15.png" alt="Map 15"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map16.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map16.png" alt="Map 16"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map17.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map17.png" alt="Map 17"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map18.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map18.png" alt="Map 18"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map19.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map19.png" alt="Map 19"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map20.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map20.png" alt="Map 20"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map21.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map21.png" alt="Map 21"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map22.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map22.png" alt="Map 22"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map23.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map23.png" alt="Map 23"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map24.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map24.png" alt="Map 24"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map25.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map25.png" alt="Map 25"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map26.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map26.png" alt="Map 26"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map27.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map27.png" alt="Map 27"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map28.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map28.png" alt="Map 28"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map29.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map29.png" alt="Map 29"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map30.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map30.png" alt="Map 30"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map31.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map31.png" alt="Map 31"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map32.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map32.png" alt="Map 32"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map33.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map33.png" alt="Map 33"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map34.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map34.png" alt="Map 34"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map35.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map35.png" alt="Map 35"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map36.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map36.png" alt="Map 36"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map37.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map37.png" alt="Map 37"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map38.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map38.png" alt="Map 38"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map39.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map39.png" alt="Map 39"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map40.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map40.png" alt="Map 40"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map41.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map41.png" alt="Map 41"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map42.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map42.png" alt="Map 42"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map43.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map43.png" alt="Map 43"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map44.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map44.png" alt="Map 44"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map45.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map45.png" alt="Map 45"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map46.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map46.png" alt="Map 46"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map47.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map47.png" alt="Map 47"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map48.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map48.png" alt="Map 48"></div></a></div>
+            </article>
+            <article class="gallery-item">
+                <div class="gallery-card"><a href="images/map49.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map49.png" alt="Map 49"></div></a></div>
+            </article>
+            <article class="gallery-item gallery-item--stagger">
+                <div class="gallery-card"><a href="images/map50.png" target="_blank" rel="noopener noreferrer"><div class="gallery-frame"><img src="images/map50.png" alt="Map 50"></div></a></div>
+            </article>
         </div>
     </main>
 
